@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        .logo{
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background: white;
+        }
+
+        .nav{
+            display: flex;
+            width: 84%;
+            margin: auto;
+            padding: 20px 0;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav ul{
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav ul li{
+            list-style: none;
+        }
+        
+        .nav ul li a{
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        .nav ul li a:hover{
+            color: red;
+        }
+
+        .imgg{
+            width: 100px;
+            height: auto;
+        }
+        .Home{
+            margin-left: 8%;
+            margin-top: 15%; 
+        }
+
+        .Home h1{
+            font-size: 50px;
+            color: black;
+            margin-bottom: 20px;
+        }
+
+        .span{
+            color: orange;
+        }
+
+
+        .Home p{
+            color: blue;
+            line-height: 22px;
+        }
+
+        .Home a{
+            background: #212121;
+            padding: 10px 18px;
+            text-decoration: none;
+            font-weight: bold;
+            color: #fff;
+            display: inline-block;
+            margin: 30px 0;
+            border-radius: 5px;
+        }
+        .download-cv {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #00da62;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: 500;
+        transition: background-color 0.3s;
+        animation: bounce 2s infinite;
+    }
+
+    .download-cv:hover {
+        background-color: #00a84b;
+    }
+    .img {
+    position: absolute;
+    top: 200px; 
+    right: 10%; 
+    width: 200px; 
+    height: 200px;
+    border-radius: 50%; 
+    background-color: #04acfa;
+    border: 4px solid #0e0e91; 
+    object-fit: cover;
+}
+
+body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        
+
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        p {
+            color: #555;
+        }
+        .about-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 0;
+            background-color: #fff;
+        }
+
+        .about-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1000px;
+            width: 90%;
+        }
+
+        .about-image {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about-text {
+            max-width: 600px;
+            padding: 20px;
+        }
+
+        .about-text h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .about-text p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .about-text .highlight {
+            color: #00da62;
+            font-weight: bold;
+        }
+
+        
+
+        @media (max-width: 768px) {
+            .about-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-text {
+                padding: 0;
+            }
+
+            .about-image {
+                margin-bottom: 20px;
+            }
+        }
+.skills-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            width: 80%;
+            margin: 50px auto;
+        }
+
+        .skills-section h1 {
+            width: 100%;
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 40px;
+        }
+
+        .skill-card {
+            background-color: #f3f3f3;
+            border-radius: 10px;
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: scale(1.05);
+        }
+
+        .skill-card img {
+            width: 60px;
+            height: 60px;
+        }
+
+        .skill-card h3 {
+            margin-top: 10px;
+            font-size: 22px;
+            color: #333;
+        }
+
+        .skill-card p {
+            color: #555;
+            font-size: 16px;
+        }
+
+        .projects-section {
+            width: 80%;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        .projects-section h1 {
+            font-size: 40px;
+            margin-bottom: 40px;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .project-item {
+            background-color: #f3f3f3;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .project-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .project-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 20px;
+        }
+
+        .project-content h3 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .project-content p {
+            color: #555;
+            font-size: 16px;
+        }
+
+        .project-content a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #00da62;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .project-content a:hover {
+            background-color: #00a84b;
+        }
+
+        .contact-section {
+            width: 80%;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        .contact-section h1 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+            color: #333;
+            font-size: 18px;
+        }
+
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #0400da;
+            font-size: 24px;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #00a84b;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <nav class="nav">
+            <img src="C:\Users\santhosh\OneDrive\Desktop\HTML\img\Untitled design (1).png" class="imgg" alt="Logo">
+            <ul>
+                <li><a href="#s1">Home</a></li>
+                <li><a href="#s2">About me</a></li>
+                <li><a href="#s3">Skills</a></li>
+                <li><a href="#s4">Projects</a></li>
+                <li><a href="#s5">Contact</a></li>
+            </ul>
+            <img class="img" src="C:\Users\santhosh\OneDrive\Desktop\HTML\img\img-removebg-preview.png" alt="Circular Image">
+
+        </nav>
+        <div class="Home">
+            <h1>I'm San<span class="span">thosh</span></h1>
+            <p>I'm Santhosh, a dedicated software developer specializing in creating dynamic <br> Web applications with a passion for both front-end and back-end technologies.</p>
+            <a href="C:\Users\santhosh\Downloads\santhosh (2).pdf"download class="download-cv">Download Cv</a>      
+        </div>
+    </div>
+    <div class="about-section">
+        <div class="about-container">
+            
+            <div class="about-image">
+                <img src="C:\Users\santhosh\OneDrive\Desktop\HTML\img\img-removebg-preview.png" alt="Profile Image">
+            </div>
+            
+            
+            <div class="about-text">
+                <h1 id="s2">About<span class="highlight">Me</span></h1>
+                <p>
+                    Hello! I'm <span class="highlight">Santhosh</span>, a passionate software developer specializing in both front-end and back-end technologies. 
+                    With expertise in creating modern, responsive web applications, I am driven by a love for clean code and functional design.
+                </p>
+                <p>
+                    My primary focus is on technologies like <span class="highlight">HTML, CSS, JavaScript,Node.js and Mysql</span>, with experience in full-stack development. 
+                    I enjoy building user-friendly interfaces and making sure every detail is pixel-perfect.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="skills-section">
+        <h1 id="s3"> Skills</h1>
+
+        <div class="skill-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML Icon">
+            <h3>HTML</h3>
+            <p>Proficient in writing semantic and SEO-friendly HTML code.</p>
+        </div>
+
+        <div class="skill-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSS Icon">
+            <h3>CSS</h3>
+            <p>Experience in creating responsive and visually appealing designs.</p>
+        </div>
+
+        <div class="skill-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/919/919828.png" alt="JavaScript Icon">
+            <h3>JavaScript</h3>
+            <p>Expert in dynamic and interactive web development using JavaScript.</p>
+        </div>
+
+        <div class="skill-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/919/919851.png" alt="React Icon">
+            <h3>React.js</h3>
+            <p>Skilled in building interactive UIs with React.js.</p>
+        </div>
+        
+        <div class="skill-card">
+            <img src="https://www.mysql.com/common/logos/logo-mysql-170x115.png" alt="React Icon">
+            <h3>Mysql</h3>
+            <p>MySQL is a relational database management system that organizes data into physical files for speed.</p>
+        </div>
+    </div>
+    <div class="projects-section">
+        <h1 id="s4"> Projects</h1>
+
+        <div class="project-grid">
+            <div class="project-item">
+                <img src="C:\Users\santhosh\OneDrive\Desktop\HTML\img\translation.png" alt="Project 1">
+                <div class="project-content">
+                    <h3>Project 1</h3>
+                    <p>A brief description of the project, ONLINE COURSE PLATFORM LANGUAGE TRANSLATION.</p>
+                    <a href="#">View Project</a>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <img src="C:\Users\santhosh\OneDrive\Desktop\HTML\img\iot.jpg" alt="Project 2">
+                <div class="project-content">
+                    <h3>Project 2</h3>
+                    <p>A brief description of the project,  IoT-based smart agriculture monitoring System.</p>
+                    <a href="#">View Project</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contact-section">
+        <h1 id="s5">Contact Me</h1>
+        <div class="contact-info">
+            <p>Email: <a href="mailto:santhoshsubramani895@gmail.com">santhoshsubramani895@gmail.com</a></p>
+            <p>Phone: <a href="tel:+6374304598">+8925148005</a></p>
+            <p>Location: 38, Periyannan Nagar </p>
+            <p>Edaiyarpalayam, Coimbatore.</p>
+        </div>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/santhosh-s-827560211/" target="_blank">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/Sandy-1320" target="_blank">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://www.facebook.com/share/KPmybgW1Xk4jWr47/?mibextid=qi2Omg" target="_blank">
+                <i class="fab fa-facebook"></i> Facebook
+            </a>
+            <a href="whatsapp.com/" target="_blank">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="" target="_blank">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
+        </div>
+        
+</body>
+</html>
